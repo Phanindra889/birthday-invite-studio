@@ -1,0 +1,48 @@
+{
+  "name": "birthday-invite-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Animated first-birthday invitation video editor with beat-synced Remotion composition and MP4 export.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "studio": "remotion studio src/video/index.ts",
+    "audio": "node scripts/generate-audio.mjs",
+    "render": "tsx scripts/render-cli.ts",
+    "test:beats": "tsx scripts/test-beats.ts",
+    "stills": "tsx scripts/render-stills.ts",
+    "check-sync": "tsx scripts/check-sync.ts"
+  },
+  "dependencies": {
+    "@fontsource/baloo-2": "^5.3.0",
+    "@fontsource/chewy": "^5.3.0",
+    "@fontsource/dancing-script": "^5.3.0",
+    "@fontsource/fredoka": "^5.3.0",
+    "@fontsource/great-vibes": "^5.3.0",
+    "@fontsource/luckiest-guy": "^5.3.0",
+    "@fontsource/nunito": "^5.3.0",
+    "@fontsource/pacifico": "^5.3.0",
+    "@fontsource/quicksand": "^5.3.0",
+    "@remotion/player": "4.0.534",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@remotion/bundler": "4.0.534",
+    "@remotion/cli": "4.0.534",
+    "@remotion/renderer": "4.0.534",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
+  }
+}
