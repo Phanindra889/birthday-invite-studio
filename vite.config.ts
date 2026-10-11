@@ -11,5 +11,6 @@ export default defineConfig({
     port: 5173,
     watch: { ignored: ['**/out/**', '**/.cache/**'] },
   },
-  preview: { port: 4173 },
+  // `npm start` (used on Render): listen on all interfaces and accept the public hostname.
+  preview: { port: Number(process.env.PORT) || 4173, host: true, allowedHosts: true },
 });

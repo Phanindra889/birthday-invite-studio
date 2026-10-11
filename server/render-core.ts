@@ -164,6 +164,8 @@ export async function renderInvitation(args: {
     jpegQuality: 92,
     scale: size.scale,
     enforceAudioTrack: true,
+    // Small cloud instances run out of memory with several Chrome tabs; set RENDER_CONCURRENCY=1 there.
+    concurrency: process.env.RENDER_CONCURRENCY ? Number(process.env.RENDER_CONCURRENCY) : null,
     outputLocation: videoPath,
     overwrite: true,
     cancelSignal,
